@@ -32,11 +32,12 @@ jobs:
       fail-fast: false
       matrix:
         runner:
-          - runs-on,runner=16cpu-linux
+          - runs-on,runner=16cpu-linux-x64,family=c7a
+          - blacksmith-16vcpu-ubuntu-2204
           - buildjet-16vcpu-ubuntu-2204
           - warp-ubuntu-latest-x64-16x
           - ubicloud-standard-16
-          - ubuntu-latest
+          # - ubuntu-latest
           - github-16cpu
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 300
