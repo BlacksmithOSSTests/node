@@ -34,6 +34,8 @@ jobs:
         runner:
           - blacksmith-16vcpu-ubuntu-2204
           - blacksmith-staging-16vcpu-ubuntu-2204
+          - blacksmith-staging-32vcpu-ubuntu-2204
+          - blacksmith-8vcpu-ubuntu-2204
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 300
     steps:
