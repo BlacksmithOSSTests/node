@@ -32,10 +32,9 @@ jobs:
       fail-fast: false
       matrix:
         runner:
-          - blacksmith-16vcpu-ubuntu-2204
-          - blacksmith-staging-16vcpu-ubuntu-2204
-          - blacksmith-staging-32vcpu-ubuntu-2204
-          - blacksmith-8vcpu-ubuntu-2204
+          - blacksmith-2vcpu-ubuntu-2204
+          - blacksmith-4vcpu-ubuntu-2204
+          - ubuntu-latest
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 300
     steps:
